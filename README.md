@@ -40,3 +40,51 @@ module.exports = {
 ```
 
 [See Themes here](https://daisyui.com/docs/default-themes)
+
+## [Svelte Testing Library](https://testing-library.com/docs/svelte-testing-library/intro/)
+
+```
+npm i @testing-library/svelte @testing-library/jest-dom @babel/core @babel/preset-env jest babel-jest @types/jest svelte-jester -D
+```
+
+```
+// package.json
+
+"scripts": {
+  ...
+  "test": "jest src",
+  "test:watch": "npm run test -- --watch"
+},
+"jest": {
+  "transform": {
+    "^.+\\.js$": "babel-jest",
+    "^.+\\.svelte$": "svelte-jester"
+  },
+  "moduleFileExtensions": [
+    "js",
+    "svelte"
+  ],
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ]
+}
+
+```
+
+```
+// .babelrc
+
+{
+	"presets": [["@babel/preset-env", { "targets": { "node": "current" } }]]
+}
+```
+
+```
+// .eslintrc.cjs
+
+env: {
+  ...
+  'jest/globals': true
+}
+```

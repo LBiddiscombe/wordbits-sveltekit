@@ -1,5 +1,5 @@
 <script>
-	import ExampleComponent from '../components/ExampleComponent.svelte';
+	import ExampleComponent from '$lib/components/ExampleComponent.svelte';
 </script>
 
 <div class="hero min-h-screen bg-base-200">

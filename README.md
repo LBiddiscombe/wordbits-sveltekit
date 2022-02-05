@@ -88,3 +88,6 @@ env: {
   'jest/globals': true
 }
 ```
+## Typing via JSDocs approach
+
+See [this walkthrough](https://www.swyx.io/jsdoc-swyxkit/) from [Shawn Wang - Swyx](https://www.swyx.io/).

@@ -91,3 +91,10 @@ env: {
 ## Typing via JSDocs approach
 
 See [this walkthrough](https://www.swyx.io/jsdoc-swyxkit/) from [Shawn Wang - Swyx](https://www.swyx.io/).
+
+## Page Specific Components
+We can create a `/routes/page/_components` folder which will not expose the components as a public route
+
+## [Less Boiler Plate-y api route](https://kit.svelte.dev/docs/routing#endpoints)
+
+If an endpoint has the same filename as a page (except for the extension), the page will get its props from the endpoint. So a page like `src/routes/items/[id].svelte` could get its props from `src/routes/items/[id].js`
